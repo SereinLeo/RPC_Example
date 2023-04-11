@@ -3,6 +3,7 @@ package com.wanfeng.protocol;
 import com.wanfeng.common.Invocation;
 import org.apache.commons.io.IOUtils;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
@@ -17,7 +18,7 @@ import java.net.URL;
  */
 //http请求客户端，用于Consumer模块发送或请求
 public class HttpClient {
-	public String send(String hostname, Integer port, Invocation invocation){
+	public String send(String hostname, Integer port, Invocation invocation) throws IOException {
 		//读取用户配置（http发送方式）
 		try {
 			//声明url并开启http连接
@@ -43,9 +44,8 @@ public class HttpClient {
 
 			return result;
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw e;
 		}
 
-		return null;
 	}
 }

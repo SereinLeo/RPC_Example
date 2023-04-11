@@ -1,7 +1,5 @@
 package com.wanfeng;
 
-import com.wanfeng.common.Invocation;
-import com.wanfeng.protocol.HttpClient;
 import com.wanfeng.proxy.ProxyFactory;
 
 /**
