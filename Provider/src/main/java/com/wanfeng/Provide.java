@@ -18,7 +18,7 @@ public class Provide {
 
 		//注册中心注册
 		URL url = new URL("localhost", 8080);
-		RemoteRegister.register(HelloService.class.getName(), "1.0", url);
+		RemoteRegister .register(HelloService.class.getName(), "1.0", url);
 
 		//开启Http服务
 		HttpServer httpServer = new HttpServer();

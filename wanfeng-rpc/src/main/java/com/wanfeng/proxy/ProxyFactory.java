@@ -28,12 +28,13 @@ public class ProxyFactory {
 			@Override
 			public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
-				//实现服务mock
 				String mock = System.getProperty("mock");
 				if( mock != null && mock.startsWith("return:")){
 					String result = mock.replace("return:", "");
 					return result;
 				}
+
+
 
 
 				//封装调用信息
